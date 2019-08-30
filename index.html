@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <button onclick="showMessage('abc@gmail.com','123456')">Click me!</button>
+    <script>
+    function showMessage(account, password) {
+      AndroidInterface.login(account, password);
+	  window.webkit.messageHandlers.observe.postMessage("Hello Khanh");
+    }
+    </script>
+  </body>
+</html>
