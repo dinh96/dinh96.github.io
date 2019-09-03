@@ -13,10 +13,10 @@
 
 	function sendData() {
     if (typeof Android != 'undefined') {
-      Android.sendData("Hello, I am Android");
+      Android.sendData("Hello, I am Android - SP");
     }
-    if (typeof messageHandlers != 'undefined') {
-      messageHandlers.ios.postMessage("Hello, I am IOS");
+    if (typeof window.webkit.messageHandlers != 'undefined') {
+      window.webkit.messageHandlers.ios.postMessage("Hello, I am IOS - SP");
     }
   }
     </script>
