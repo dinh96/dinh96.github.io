@@ -5,13 +5,20 @@
     <title></title>
   </head>
   <body>
-    <button onclick="showMessage('abc@gmail.com','123456')">Click me!</button>
+    <button onclick="showMessage()">Click me!</button>
     <script>
-    function showMessage(account, password) {
-      AndroidInterface.login(account, password);
-	  console.log('hello');
-	  window.webkit.messageHandlers.observe.postMessage("Hello Khanh");
+    function showMessage() {
+      sendAndroid();
+      sendAndroid();
     }
+
+	function sendAndroid() {
+    Android.sendData(`Hello, I am Android`);
+  }
+
+  function sendIOS() {
+    window.webkit.messageHandlers.ios.postMessage("Hello, I am IOS");
+  }
     </script>
   </body>
 </html>
