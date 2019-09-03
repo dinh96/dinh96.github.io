@@ -14,11 +14,11 @@
 	function sendData() {
     if (typeof window.webkit != 'undefined' &&
         typeof window.webkit.messageHandlers != 'undefined') {
-      window.webkit.messageHandlers.ios.postMessage("Hello, I am IOS - SP");
+      window.webkit.messageHandlers.LoginCallback.postMessage('{"mail_address":"ledinhhoang93@gmail.com","password":"12345678","nickname":"HoangLD"}');
     }
 
     if (typeof Android != 'undefined') {
-      Android.sendData("Hello, I am Android - SP");
+      Android.loginLinkDriveCallback('ledinhhoang93@gmail.com', '12345678', 'HoangLD');
     }
   }
     </script>
