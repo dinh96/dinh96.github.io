@@ -8,18 +8,16 @@
     <button onclick="showMessage()">Click me!</button>
     <script>
     function showMessage() {
-      sendAndroid();
-      //sendIOS();
+      sendData();
     }
 
-	function sendAndroid() {
-    Android.sendData("Hello, I am Android");
-    console.log("Send from Android");
-  }
-
-  function sendIOS() {
-    window.webkit.messageHandlers.ios.postMessage("Hello, I am IOS");
-    console.log("Send from ios");
+	function sendData() {
+    if (typeof Android != 'undefined') {
+      Android.sendData("Hello, I am Android");
+    }
+    if (typeof messageHandlers != 'undefined') {
+      messageHandlers.ios.postMessage("Hello, I am IOS");
+    }
   }
     </script>
   </body>
