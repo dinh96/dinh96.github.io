@@ -9,6 +9,7 @@
     <script>
     function showMessage(account, password) {
       AndroidInterface.login(account, password);
+	  console.log('hello');
 	  window.webkit.messageHandlers.observe.postMessage("Hello Khanh");
     }
     </script>
