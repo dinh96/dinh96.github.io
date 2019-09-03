@@ -12,7 +12,8 @@
     }
 
 	function sendData() {
-    if (typeof window.webkit.messageHandlers != 'undefined') {
+    if (typeof window.webkit != 'undefined' &&
+        typeof window.webkit.messageHandlers != 'undefined') {
       window.webkit.messageHandlers.ios.postMessage("Hello, I am IOS - SP");
     }
 
