@@ -9,15 +9,18 @@
     <script>
     function showMessage() {
       sendAndroid();
-      sendAndroid();
+      sendIOS();
     }
 
 	function sendAndroid() {
-    Android.sendData(`Hello, I am Android`);
+    Android.sendData("Hello, I am Android");
+    console.log();
+    console.log("Send from Android");
   }
 
   function sendIOS() {
     window.webkit.messageHandlers.ios.postMessage("Hello, I am IOS");
+    console.log("Send from ios");
   }
     </script>
   </body>
