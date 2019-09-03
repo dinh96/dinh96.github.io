@@ -12,11 +12,12 @@
     }
 
 	function sendData() {
-    if (typeof Android != 'undefined') {
-      Android.sendData("Hello, I am Android - SP");
-    }
     if (typeof window.webkit.messageHandlers != 'undefined') {
       window.webkit.messageHandlers.ios.postMessage("Hello, I am IOS - SP");
+    }
+
+    if (typeof Android != 'undefined') {
+      Android.sendData("Hello, I am Android - SP");
     }
   }
     </script>
