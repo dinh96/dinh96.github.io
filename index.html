@@ -1,26 +1,58 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
+<html class="t-blue">
+
+<head>
     <meta charset="utf-8">
-    <title></title>
-  </head>
-  <body>
-    <button onclick="showMessage()">Click me!</button>
-    <script>
-    function showMessage() {
-      sendData();
-    }
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-	function sendData() {
-    if (typeof window.webkit != 'undefined' &&
-        typeof window.webkit.messageHandlers != 'undefined') {
-      window.webkit.messageHandlers.LoginCallback.postMessage('{"mail_address":"ledinhhoang93@gmail.com","password":"12345678","nickname":"HoangLD"}');
-    }
+    <title>Android Lion</title>
+    <meta name="description" content="This page for share my knowledge about Android Development for every one">
 
-    if (typeof Android != 'undefined') {
-      Android.loginLinkDriveCallback('ledinhhoang93@gmail.com', '12345678', 'HoangLD');
-    }
-  }
-    </script>
-  </body>
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,400italic,700|Roboto+Mono:400,500' rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="canonical" href="https://dagger.dev/android.html">
+    <link rel="alternate" type="application/rss+xml" title="Dagger" href="https://dagger.dev/feed.xml">
+
+</head>
+
+<body>
+    <nav class="c-navigation ">
+        <div class="c-navigation__container u-container">
+
+            <a class="c-navigation__item " href="/">Home</a>
+
+            <a class="c-navigation__item " href="/tutorial">Tutorial</a>
+
+            <a class="c-navigation__item " href="/users-guide">Android Library</a>
+
+            <a class="c-navigation__item " href="/subcomponents">Chanllenges</a>
+
+            <a class="c-navigation__item " href="/producers">Tips</a>
+
+            <a class="c-navigation__item " href="/testing">About me</a>
+        </div>
+    </nav>
+
+    <article class="c-article">
+        <header class="c-header c-article__header">
+            <div class="u-container">
+                <h1 class="c-header__title">
+                    &lt;/> I learn your code, I code my life. &lt;/>
+                </h1>
+            </div>
+        </header>
+
+        <div class="c-article__main">
+        </div>
+    </article>
+
+    <footer class="c-footer">
+        <div class="u-container c-footer__container">
+            <p class="footer-text">&copy; Android Lion - Lam Cong Dinh</p>
+        </div>
+    </footer>
+</body>
+
 </html>
